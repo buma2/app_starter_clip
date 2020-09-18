@@ -10,9 +10,6 @@ Widget entryField(String title, {bool isPassword = false}) {
           title,
           style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
         ),
-        SizedBox(
-          height: 10,
-        ),
         TextField(
             obscureText: isPassword,
             decoration: InputDecoration(
@@ -25,18 +22,20 @@ Widget entryField(String title, {bool isPassword = false}) {
 }
 
 Widget buttonGrey(String buttonText) {
-  return Container(
-
-    padding: EdgeInsets.symmetric(vertical: 13),
-    alignment: Alignment.center,
-    decoration: BoxDecoration(
-      borderRadius: BorderRadius.all(Radius.circular(5)),
-      color: Colors.black26,
-      border: Border.all(color: Colors.black26, width: 1),
-    ),
-    child: Text(
-      buttonText,
-      style: TextStyle(fontSize: 20, color: Colors.black54),
+  return Padding(
+    padding: const EdgeInsets.only(top:30.0),
+    child: Container(
+      padding: EdgeInsets.symmetric(vertical: 13),
+      alignment: Alignment.center,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.all(Radius.circular(5)),
+        color: Colors.black26,
+        border: Border.all(color: Colors.black26, width: 1),
+      ),
+      child: Text(
+        buttonText,
+        style: TextStyle(fontSize: 20, color: Colors.black54),
+      ),
     ),
   );
 }

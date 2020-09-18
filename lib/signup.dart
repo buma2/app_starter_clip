@@ -38,9 +38,6 @@ class _SignUpPageState extends State<SignUpPage> {
               'Already have an account ?',
               style: TextStyle(fontSize: 13, fontWeight: FontWeight.w600),
             ),
-            SizedBox(
-              width: 10,
-            ),
             Text(
               'Login',
               style: TextStyle(
@@ -73,24 +70,19 @@ class _SignUpPageState extends State<SignUpPage> {
         child: Stack(
           children: <Widget>[
             Container(
-              padding: EdgeInsets.symmetric(horizontal: 20),
+              padding: EdgeInsets.only(top: 100),
               child: SingleChildScrollView(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    SizedBox(height: height * .2),
-                    SizedBox(
-                      height: 50,
-                    ),
-                    _emailPasswordWidget(),
-                    SizedBox(
-                      height: 20,
-                    ),
-                    buttonGrey("Register now"),
-                    SizedBox(height: height * .14),
-                    _loginAccountLabel(),
-                  ],
+                child: Padding(
+                  padding: const EdgeInsets.all(30.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      _emailPasswordWidget(),
+                      buttonGrey("Register now"),
+                      _loginAccountLabel(),
+                    ],
+                  ),
                 ),
               ),
             ),

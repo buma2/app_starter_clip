@@ -55,7 +55,7 @@ class _WelcomePageState extends State<WelcomePage> {
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
     final height = MediaQuery.of(context).size.height;
-    final kNeumorphicColorTop = Color.fromRGBO(240, 80, 83,1); //Color.fromRGBO(255, 191, 0, 1);
+    final kNeumorphicColorTop = Color.fromRGBO(240, 80, 83,1);
     final kNeumorphicColorBottom = Color.fromRGBO(255, 191, 0,1);
 
     final boxShadow = BoxShadow(
@@ -143,13 +143,7 @@ class _WelcomePageState extends State<WelcomePage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     _title(),
-                    SizedBox(
-                      height: 30,
-                    ),
                     _loginButton(),
-                    SizedBox(
-                      height: 20,
-                    ),
                     _signUpButton(),
                   ],
                 ),

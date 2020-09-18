@@ -38,9 +38,6 @@ class _LoginPageState extends State<LoginPage> {
               'Don\'t have an account ?',
               style: TextStyle(fontSize: 13, fontWeight: FontWeight.w600),
             ),
-            SizedBox(
-              width: 10,
-            ),
             Text(
               'Register',
               style: TextStyle(
@@ -73,16 +70,13 @@ class _LoginPageState extends State<LoginPage> {
           child: Stack(
             children: <Widget>[
               Container(
-                padding: EdgeInsets.symmetric(horizontal: 20),
+                padding: EdgeInsets.only(left:20, top: 180, right:20 ),
                 child: SingleChildScrollView(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      SizedBox(height: height * .2),
-                      SizedBox(height: 50),
                       _emailPasswordWidget(),
-                      SizedBox(height: 20),
                       buttonGrey("Login"),
                       _createAccountLabel(),
                     ],
